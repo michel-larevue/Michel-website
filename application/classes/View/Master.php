@@ -36,6 +36,20 @@ class View_Master extends View_Tanuki {
 	}
 
 	/**
+	* Styles
+	*
+	* @return	array
+	**/
+	public function styles()
+	{
+		return array(
+			array(
+				'src'	=> $this->base_url() . 'assets/css/main.css',
+			)
+		);
+	}
+
+	/**
 	* Define main navigation
 	*
 	* @return 	array

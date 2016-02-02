@@ -7,8 +7,10 @@
 		{{#styles}}<link rel="stylesheet" href="{{src}}" media="{{media}}" />{{/styles}}
 	</head>
 	<body {{#custom_css}}class="{{custom_css}}"{{/custom_css}}>
-		{{>layout/header}}
-		{{>layout/navigation}}
+		<div class="banner">
+			{{>layout/header}}
+			{{>layout/navigation}}
+		</div>
 		{{>content}}
 		{{>layout/footer}}
 		{{#scripts}}<script type="text/javascript" src="{{src}}"></script>{{/scripts}}

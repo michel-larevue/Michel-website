@@ -1,0 +1,46 @@
+// Grille //
+.wrapper(@cols)
+{
+	width: @column-width * @cols;
+	margin-left: auto;
+	margin-right: auto;
+	.cf();
+	& when(@debug = true)
+	{
+		outline: 1px dotted rgba(255, 0, 0, 0.3);
+	}
+}
+
+.column-init()
+{
+	box-sizing: border-box;
+	padding-left: @gutter-width / 2;
+	padding-right: @gutter-width / 2;
+	min-height: 1px; 
+	clear: none;
+	& when(@debug = true)
+	{
+		background-color: rgba(255, 0, 0, 0.1);    
+	}
+}
+.column(@cols)
+{
+	float: left;
+	width : @column-width * @cols; 
+}
+
+// Utilitaires //
+// Clearfix
+// From http://nicolasgallagher.com/micro-clearfix-hack/
+.cf()
+{
+	*zoom: 1;
+	&:before,
+	&:after {
+		content: " ";
+		display: table;
+	}
+	&:after {
+		clear: both;
+	}
+}

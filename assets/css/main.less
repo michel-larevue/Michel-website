@@ -1,0 +1,193 @@
+// Import
+@import url(libs/reset.css);
+@import url(libs/tools.less);
+@import url(libs/variables.less);
+
+// Variables
+@debug: false;
+
+/** Texte **/
+body
+{
+	font: unit((@font-normal / @font-root * 100), %)/1.5em Georgia, Serif;
+	color: @color-text;
+}
+h1
+{
+	font-size: @font-xlarge;
+	font-weight: bold;
+	line-height: 1.2em;
+	margin-bottom: 1em;
+}
+h2
+{
+	&:extend(h1);
+	font-size: @font-large;
+}
+p
+{
+	margin-bottom: 1.5em;
+}
+
+/** Banner **/
+.banner
+{
+	padding-top: 1em;
+	padding-bottom: 1em;
+}
+
+/** Navigation **/
+.btn,
+.btn:visited
+{
+	font-size: @font-small;
+	text-decoration: none;
+	background-color: @color-secondary;
+	color: @color-text;
+	display: block;
+	text-align: center;
+	padding: .5em 1.5em;
+	
+	&:hover
+	{
+		background-color: @color-primary;
+		color: @color-white;
+	}
+}
+
+/** Article **/
+.article-footer
+{
+	font-size: @font-small;
+}
+
+/** Footer **/
+.main-footer
+{
+	padding-top: 1em;
+	padding-bottom: 1em;
+	font-size: @font-small;
+	
+	h1
+	{
+		font-size: @font-large;
+	}
+	
+	section
+	{
+		&.sub-footer
+		{
+			font-size: @font-xsmall;
+			color: @color-muted;
+			a,
+			a:hover,
+			a:visited,
+			a:active
+			{
+				color: @color-muted;
+			}
+			
+		}
+	}
+}
+
+/** Mobile first **/
+.main-header,
+.main-nav,
+.article-header,
+.article-content,
+.article-footer,
+.main-footer > section
+{
+	.column-init();
+}
+
+/** Taille d'écran moyen **/
+@media screen and (min-width : @device-medium)
+{
+	/** Wrapper **/
+	.banner,
+	main,
+	.main-footer
+	{
+		.wrapper(12);
+	}
+	
+	/** Banner **/
+	.main-header
+	{
+		.column(8);
+	}
+	
+	/** Navigation **/
+	.main-nav
+	{
+		.column(4);
+	}
+	.btn
+	{
+		display: inline-block;   
+	}
+	
+	/** Article **/
+	.article-content
+	{
+		.column(8);
+	}
+	
+	/** Footer **/
+	.main-footer > section
+	{
+		.column(6);
+		&.sub-footer
+		{
+			.column(12);
+		}
+	}
+}
+
+/** Grands écrans **/
+@media screen and (min-width: @device-large)
+{
+	/** Wrapper **/
+	 .banner,
+	main,
+	.main-footer
+	{
+		.wrapper(14);
+	}
+ 
+	/** Banner **/
+	.main-header
+	{
+		.column(10);
+	}
+	.main-nav
+	{
+		.column(4);
+	}
+	
+	/** Article **/
+	.article-header
+	{
+		.column(4);
+	}
+	.article-content
+	{
+		.column(7);
+	}
+	.article-footer
+	{
+		.column(3);
+	}
+	
+ /** Footer **/
+	.main-footer > section
+	{
+		.column(7);
+		&.sub-footer
+		{
+			.column(14);
+		}
+	}
+}

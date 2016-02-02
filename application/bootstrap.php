@@ -152,7 +152,7 @@ Cookie::$salt = Kohana::$config->load('session', 'cookie.salt');
 Route::set('pages', '<slug>', array(
 		// 'slug'	=> 'my_page', // restrict to a specific url
 		// 'slug'	=> '.*', // for any extension in url
-		'slug'	=> '[a-zA-Z0-9_\-/]+', // for subfolder
+		// 'slug'	=> '[a-zA-Z0-9_\-/]+', // for subfolder
 	))
 	->defaults(array(
 		'controller'	=> 'Pages',

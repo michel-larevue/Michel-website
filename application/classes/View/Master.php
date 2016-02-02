@@ -44,10 +44,10 @@ class View_Master extends View_Tanuki {
 	{
 		return array(
 			array(
-				'url'		=> $this->base_url() . 'colophon',
-				'name'		=> __('Colophon'),
+				'url'		=> $this->base_url() . 'editorial',
+				'name'		=> __('Éditorial'),
 				'title'		=> __('À propos de Michel la revue'),
-				'current'	=> Request::initial()->controller() === 'App' AND Request::initial()->param('slug') === 'colophon',
+				'current'	=> Request::initial()->controller() === 'App' AND Request::initial()->param('slug') === 'editorial',
 			),
 		);
 	}	

@@ -20,7 +20,6 @@ class View_Master extends View_Tanuki {
 	**/
 	public function tanuki()
 	{
-		echo debug::vars(text::random(NULL, 32));
 		return array(
 			'title' 		=> "Michel la revue",
 			'description'	=> "Art, culture &amp; société en Normandie",

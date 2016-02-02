@@ -1,0 +1,34 @@
+// Fontes
+@import url(https://fonts.googleapis.com/css?family=Arvo:700|Merriweather:400,300,300italic,400italic);
+@font-family-heading: Arvo, 'Arial Black', Arial, sans-serif;
+@font-family: Merriweather, 'Times', 'Times New Roman', serif;
+
+// Tailles
+@font-root            : 16px;
+@font-normal          : 23px;
+@font-large           : unit((32px / @font-normal), em);
+@font-xlarge          : unit((46px / @font-normal), em);
+@font-xxlarge         : unit((53px / @font-normal), em);
+@font-small           : unit((18px / @font-normal), em);
+@font-xsmall          : unit((16px / @font-normal), em);
+@column-width         : unit((96px / @font-root), rem); // Attention aux REM sur les médias queries sous Safari 5.1 : http://codepen.io/ziopod/pen/meKVxX
+@gutter-width         : unit((36px / @font-root), rem); 
+// Couleurs
+@color-primary        : #DC710F; 
+@color-primary-light  : #E18E1C; 
+@color-primary-lighter: #FDEDDA; 
+@color-secondary      : #C5E0DC;
+@color-text           : #382A27;
+@color-link           : #DC710F;
+@color-muted          : #6E6563;
+@color-muted-lighter  : #F0EFEE;
+@color-white          : white;
+@color-black          : black;
+// Points d'arrets
+// Cf.
+// https://responsivedesign.is/develop/browser-feature-support/media-queries-for-common-device-breakpoints
+// https://css-tricks.com/snippets/css/media-queries-for-standard-devices/
+@device-medium: unit((1224px / @font-root), rem);
+@device-large: unit((1824px / @font-root), rem);
+// Divers
+@debug: false;

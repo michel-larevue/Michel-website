@@ -29,7 +29,7 @@ Class Controller_Api extends Controller {
 	/**
 	* Synch local content with distant repo
 	**/
-	public function action_synch()
+	public function action_sync()
 	{
 		$response = $this->publish_content(Kohana::$config->load('tanuki.repo'));
 		$this->response->body($response);

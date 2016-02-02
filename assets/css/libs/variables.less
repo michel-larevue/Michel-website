@@ -1,11 +1,13 @@
 // Variables //
+// Do not modify this lib file, copy it to your own CSS folder
+
 @font-root       : 16px;
 @font-normal     : 23px;
-@font-large      : 32px;
-@font-xlarge     : 46px;
+@font-large      : unit((32px / @font-normal), em);
+@font-xlarge     : unit((46px / @font-normal), em);
 @font-small      : unit((18px / @font-normal), em);
 @font-xsmall     : unit((16px / @font-normal), em);
-@column-width    : unit((96px / @font-root), rem); // Attention aux REM sur les médias queries sous Safari 5.1 : http://codepen.io/ziopod/pen/meKVxX
+@column-width    : unit((96px / @font-root), rem);
 @gutter-width    : unit((36px / @font-root), rem); 
 // Couleurs
 @color-primary   : #E08E79; 

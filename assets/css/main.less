@@ -1,7 +1,7 @@
 // Import
 @import url(libs/reset.css);
 @import url(libs/tools.less);
-@import url(libs/variables.less);
+@import url(variables.less);
 
 // Variables
 @debug: false;
@@ -9,13 +9,13 @@
 /** Texte **/
 body
 {
-	font: unit((@font-normal / @font-root * 100), %)/1.5em Georgia, Serif;
+	font: 300 unit((@font-normal / @font-root * 100), %)/1.5em @font-family;
 	color: @color-text;
+	background-color: @color-muted-lighter;
 }
 h1
 {
-	font-size: @font-xlarge;
-	font-weight: bold;
+	font: 700 @font-xlarge/1.2em @font-family-heading;
 	line-height: 1.2em;
 	margin-bottom: 1em;
 }
@@ -137,7 +137,7 @@ img
 	/** Article **/
 	.article-content
 	{
-		.column(8);
+		.column(7);
 	}
 	
 	/** Footer **/

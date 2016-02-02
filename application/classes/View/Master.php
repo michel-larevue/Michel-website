@@ -20,6 +20,7 @@ class View_Master extends View_Tanuki {
 	**/
 	public function tanuki()
 	{
+		echo debug::vars(text::random(NULL, 32));
 		return array(
 			'title' 		=> "Michel la revue",
 			'description'	=> "Art, culture &amp; société en Normandie",
@@ -50,5 +51,33 @@ class View_Master extends View_Tanuki {
 				'current'	=> Request::initial()->controller() === 'App' AND Request::initial()->param('slug') === 'editorial',
 			),
 		);
+	}
+
+	/**
+	* Set HTML metas list
+	*
+	* Try to grab metas from Flatfile, even load metas from configuration file
+	*
+	* @return	array
+	**/
+	public function metas()
+	{
+		// Load metas from config file, remplaced by values set in Flatfile
+		$model_name = $this->model_name;
+		$default_metas = Kohana::$config->load('tanuki.metas');
+		$metas = array();
+
+		if ($default_metas)
+		{
+			foreach ($default_metas as $name => $content)
+			{
+				$metas[] = array(
+					'name' => $name,
+					'content' => $this->$model_name->$name ? $this->$model_name->$name : $content,
+				);
+			}			
+		}
+
+		return $metas;
 	}
 }

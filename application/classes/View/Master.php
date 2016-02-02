@@ -24,9 +24,9 @@ class View_Master extends View_Tanuki {
 			'title' 		=> "Michel la revue",
 			'description'	=> "Art, culture &amp; société en Normandie",
 			'author'		=> array(
-				'name'		=> "Ziopod",
-				'email'		=> "hello@ziopod.com",
-				'url'		=> "http://ziopod.com",
+				'name'		=> "Michel",
+				'email'		=> "hello@michel-larevue.fr",
+				'url'		=> "http://michel-larevue.fr",
 			),
 			'license'		=> array(
 				'name'		=> 'MIT',
@@ -50,5 +50,5 @@ class View_Master extends View_Tanuki {
 				'current'	=> Request::initial()->controller() === 'App' AND Request::initial()->param('slug') === 'editorial',
 			),
 		);
-	}	
+	}
 }
